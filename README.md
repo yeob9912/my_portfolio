@@ -32,7 +32,7 @@ A tool for converting temperatures between Celsius and Fahrenheit. Provides inst
 ## 🛠️ Skills & Technologies
 
 - **Frontend:** HTML, CSS, JavaScript
-- **Tools:** Git, GitHub, Vercel
+- **Tools:** Git, GitHub
 
 ---
 

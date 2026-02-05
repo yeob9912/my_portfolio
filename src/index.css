@@ -1,0 +1,103 @@
+@import "tailwindcss";
+/* index.css - ONLY THEME STYLES */
+:root {
+  /* LIGHT THEME (default) */
+  --background: #ffffff;
+  --text: #213547;
+  --nav-bg: #ffffff;
+  
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  background-color: var(--background);
+  color: var(--text);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* DARK THEME - when <html> has "dark" class */
+:root.dark {
+  --background: #242424;
+  --text: rgba(255, 255, 255, 0.87);
+  --nav-bg: #1a1a1a;
+}
+
+/* Apply to body */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+/* Add to your existing index.css file */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add to your existing index.css */
+
+/* Glow effect for the logo */
+.text-glow {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
+               0 0 20px rgba(59, 130, 246, 0.3),
+               0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+/* Animation for mobile menu */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add this to your index.css */
+html {
+  scroll-behavior: smooth;
+}
+
+/* This ensures content appears below navbar when scrolling */
+:target {
+  scroll-margin-top: 5rem;
+}
+
+/* Add to index.css */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Matches navbar height */
+}
+
+/* This helps with anchor links */
+:target {
+  scroll-margin-top: 5rem;
+}
+/* Add to your global CSS */
+:root {
+  --home-bg-light: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --home-bg-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.dark {
+  --home-bg: var(--home-bg-dark);
+}
+
+.light {
+  --home-bg: var(--home-bg-light);
+}

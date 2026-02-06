@@ -6,20 +6,20 @@ export default function Projects() {
       title: "Simple Calculator",
       type: "Web Application",
       description: "A responsive calculator that performs basic arithmetic operations including addition, subtraction, multiplication, and division. Features a clean interface with error handling.",
-      screenshot: "public/image.png",
+      screenshot: "/image.png",
       demoLink: "https://simple-calculator-livid-mu.vercel.app/",
       githubLink: "https://github.com/yeob9912/simple_calculator",
-      technologies: ["React", "CSS"],
+      technologies: [],
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Temperature Converter",
       type: "Utility Tool",
       description: "A tool for converting temperatures between Celsius and Fahrenheit. Provides instant conversion with a user-friendly interface and clear visual feedback.",
-      screenshot: "public/Screenshot 2026-02-04 214327(1).png",
+      screenshot: "/Screenshot 2026-02-04 214327(1).png",
       demoLink: "https://temperature-conversion-wdp7.vercel.app/",
       githubLink: "https://github.com/yeob9912/Temperature-conversion",
-      technologies: ["HTML", "CSS", "JavaScript"],
+      technologies: [],
       color: "from-orange-500 to-red-500"
     },
     // {
@@ -69,17 +69,7 @@ export default function Projects() {
                       alt={project.title}
                       className="w-full h-64 object-cover"
                     />
-                    {/* Technology tags */}
-                    <div className="absolute top-3 left-3 flex flex-wrap gap-2">
-                      {project.technologies.map((tech, techIndex) => (
-                        <span 
-                          key={techIndex}
-                          className="px-3 py-1 bg-white dark:bg-gray-800 text-xs font-medium rounded-full border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+               
                   </div>
                 </div>
 

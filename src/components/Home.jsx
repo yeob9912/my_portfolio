@@ -21,7 +21,7 @@ export default function Home() {
                   boxShadow: '0 6px 20px rgba(59, 130, 246, 0.25)'
                 }}>
                 <img 
-                  src="6037363209787870571.jpg" 
+                  src="/6037363209787870571.jpg" 
                   alt="Yehwala Obssi" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />

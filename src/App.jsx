@@ -1,19 +1,37 @@
 import Contact from "./components/Contact"
-import Footer from "./components/Footer"
 import Home from "./components/Home"
 import Layout from "./components/Layout"
 import Project from "./components/Project"
 import Skills from "./components/Skills"
-function App() {
+import About from "./components/About"
+import FadeInSection from "./components/FadeInSection"
 
+function App() {
   return (
     <>
       <Layout>
-         <Home/>
-         <Skills/>
-         <Project/>
-         <Contact/>
-         <Footer/>
+        {/* ABOUT SECTIONS (Hero Intro + Detailed About Columns) */}
+        <FadeInSection>
+          <Home/>
+        </FadeInSection>
+        <FadeInSection>
+          <About/>
+        </FadeInSection>
+        
+        {/* SKILLS SECTION */}
+        <FadeInSection>
+          <Skills/>
+        </FadeInSection>
+        
+        {/* PROJECTS SECTION */}
+        <FadeInSection>
+          <Project/>
+        </FadeInSection>
+        
+        {/* CONTACT SECTION */}
+        <FadeInSection>
+          <Contact/>
+        </FadeInSection>
       </Layout>
     </>
   )

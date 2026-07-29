@@ -1,139 +1,226 @@
 import React from 'react'
 
 export default function Skills() {
-  const skills = [
+  const skillCategories = [
     {
-      name: "Python",
-      logo: (
-        <svg className="w-16 h-16" viewBox="0 0 128 128">
-          <path fill="#3776AB" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" fillRule="evenodd"/>
-          <path fill="#FFD43B" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 10.852-5.005 12.348-12.519 2.487-10.208 2.427-16.884 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" fillRule="evenodd"/>
-        </svg>
-      ),
-      color: "from-blue-500 to-cyan-500"
+      title: "LANGUAGES",
+      skills: [
+        {
+          name: "JavaScript",
+          animation: "animate-p5-float",
+          logo: (
+            <svg className="w-8 h-8" viewBox="0 0 128 128">
+              <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"/>
+              <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/>
+            </svg>
+          )
+        },
+        {
+          name: "Python",
+          animation: "animate-p5-float",
+          logo: (
+            <svg className="w-8 h-8" viewBox="0 0 128 128">
+              <path fill="#3776AB" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" fillRule="evenodd"/>
+              <path fill="#FFD43B" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 10.852-5.005 12.348-12.519 2.487-10.208 2.427-16.884 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" fillRule="evenodd"/>
+            </svg>
+          )
+        },
+        {
+          name: "SQL",
+          animation: "animate-p5-pulse",
+          logo: (
+            <img 
+              src="/database.png" 
+              alt="SQL database logo" 
+              className="w-8 h-8 object-contain filter invert dark:invert-0"
+            />
+          )
+        }
+      ]
     },
     {
-      name: "HTML5",
-      logo: (
-        <svg className="w-16 h-16" viewBox="0 0 128 128">
-          <path fill="#E34F26" d="M19.037 113.876l-10.005-112.215h109.936l-10.016 112.198-45.019 12.48z"/>
-          <path fill="#EF652A" d="M64 116.8l36.378-10.086 8.559-95.878h-44.937z"/>
-          <path fill="#EBEBEB" d="M64 52.455h-18.212l-1.258-14.094h19.47v-13.762h-34.511l.33 3.692 3.382 37.927h30.799zM64 88.198l-.061.017-15.327-4.14-.979-10.975h-13.817l1.928 21.609 28.193 7.826.063-.017z"/>
-          <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.137v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/>
-        </svg>
-      ),
-      color: "from-orange-500 to-red-500"
+      title: "FRONTEND",
+      skills: [
+        {
+          name: "React",
+          animation: "animate-p5-spin",
+          logo: (
+            <img 
+              src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/react.svg" 
+              alt="React logo" 
+              className="w-8 h-8 object-contain"
+            />
+          )
+        },
+        {
+          name: "HTML5",
+          animation: "animate-p5-float",
+          logo: (
+            <svg className="w-8 h-8" viewBox="0 0 128 128">
+              <path fill="#E34F26" d="M19.037 113.876l-10.005-112.215h109.936l-10.016 112.198-45.019 12.48z"/>
+              <path fill="#EF652A" d="M64 116.8l36.378-10.086 8.559-95.878h-44.937z"/>
+              <path fill="#EBEBEB" d="M64 52.455h-18.212l-1.258-14.094h19.47v-13.762h-34.511l.33 3.692 3.382 37.927h30.799zM64 88.198l-.061.017-15.327-4.14-.979-10.975h-13.817l1.928 21.609 28.193 7.826.063-.017z"/>
+              <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.137v13.762h33.244l.276-3.092.628-6.978.329-3.692z"/>
+            </svg>
+          )
+        },
+        {
+          name: "CSS3",
+          animation: "animate-p5-float",
+          logo: (
+            <svg className="w-8 h-8" viewBox="0 0 128 128">
+              <path fill="#1572B6" d="M19.67 26l8.069 90.493 36.206 10.05 36.307-10.063 8.078-90.48h-88.66zm69.21 50.488l-2.35 21.892.009 1.875-22.539 6.295v.002l-.018.015-22.719-6.225-1.537-17.341h11.141l.79 8.766 12.347 3.295-.004.015v-.032l12.394-3.495 1.308-14.549h-25.907l-.222-2.355-.506-5.647-.265-2.998h27.886l1.014-11h-42.473l-.223-2.589-.506-6.03-.265-3.381h55.597l-.267 3.334-2.685 30.154"/>
+            </svg>
+          )
+        }
+      ]
     },
     {
-      name: "CSS3",
-      logo: (
-        <svg className="w-16 h-16" viewBox="0 0 128 128">
-          <path fill="#1572B6" d="M19.67 26l8.069 90.493 36.206 10.05 36.307-10.063 8.078-90.48h-88.66zm69.21 50.488l-2.35 21.892.009 1.875-22.539 6.295v.002l-.018.015-22.719-6.225-1.537-17.341h11.141l.79 8.766 12.347 3.295-.004.015v-.032l12.394-3.495 1.308-14.549h-25.907l-.222-2.355-.506-5.647-.265-2.998h27.886l1.014-11h-42.473l-.223-2.589-.506-6.03-.265-3.381h55.597l-.267 3.334-2.685 30.154"/>
-        </svg>
-      ),
-      color: "from-blue-600 to-indigo-600"
+      title: "BACKEND & DATABASE",
+      skills: [
+        {
+          name: "Node.js",
+          animation: "animate-p5-pulse",
+          logo: (
+            <img 
+              src="https://cdn.simpleicons.org/nodedotjs" 
+              alt="Node.js logo" 
+              className="w-8 h-8 object-contain"
+            />
+          )
+        },
+        {
+          name: "Express",
+          animation: "animate-p5-pulse",
+          logo: (
+            <img 
+              src="https://cdn.simpleicons.org/express/ffffff" 
+              alt="Express.js logo" 
+              className="w-8 h-8 object-contain"
+            />
+          )
+        },
+        {
+          name: "MongoDB",
+          animation: "animate-p5-pulse",
+          logo: (
+            <img 
+              src="https://cdn.simpleicons.org/mongodb" 
+              alt="MongoDB logo" 
+              className="w-8 h-8 object-contain"
+            />
+          )
+        }
+      ]
     },
     {
-      name: "JavaScript",
-      logo: (
-        <svg className="w-16 h-16" viewBox="0 0 128 128">
-          <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"/>
-          <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/>
-        </svg>
-      ),
-      color: "from-yellow-500 to-amber-500"
-    },
-    {
-      name: "React",
-      logo: (
-        <img 
-          src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/react.svg" 
-          alt="React logo" 
-          className="w-16 h-16 object-contain"
-        />
-      ),
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      name: "Node.js",
-      logo: (
-        <img 
-          src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nodedotjs.svg" 
-          alt="Node.js logo" 
-          className="w-16 h-16 object-contain"
-        />
-      ),
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      name: "Git & GitHub",
-      logo: (
-        <svg className="w-16 h-16" viewBox="0 0 128 128">
-          <g fill="#181717">
-            <path d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/>
-            <path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.026 1.35.506.368.545.368 1.19-.01 1.455zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.76.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663z"/>
-          </g>
-          <path fill="#F05032" d="M124.737 58.378l-55.116-55.114c-3.172-3.174-8.32-3.174-11.494 0l-11.444 11.446 14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679-3.78 3.78-9.901 3.78-13.683 0-2.842-2.844-3.545-7.019-2.105-10.521l-13.048-13.048-.002 34.341c.922.455 1.791 1.063 2.559 1.828 3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683.934-.933 2.014-1.638 3.167-2.11v-34.659c-1.153-.472-2.231-1.172-3.167-2.111-2.862-2.86-3.551-7.06-2.083-10.576l-14.313-14.313-37.792 37.79c-3.175 3.177-3.175 8.325 0 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.495 0l54.858-54.858c3.174-3.176 3.174-8.327-.001-11.501z"/>
-        </svg>
-      ),
-      color: "from-gray-800 to-gray-900 dark:from-gray-300 dark:to-gray-100"
-    },
-    {
-      name: "SQL",
-      logo: (
-        <img 
-          src="/database.png" 
-          alt="Database/SQL logo" 
-          className="w-16 h-16 object-contain"
-        />
-      ),
-      color: "from-purple-500 to-pink-500"
+      title: "DEV-TOOLS",
+      skills: [
+        {
+          name: "Git & GitHub",
+          animation: "animate-p5-shake",
+          logo: (
+            <svg className="w-8 h-8" viewBox="0 0 128 128">
+              <g fill="currentColor" className="text-white">
+                <path d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/>
+                <path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm2.382 3.477c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.026 1.35.506.368.545.368 1.19-.01 1.455zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.76.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663z"/>
+              </g>
+              <path fill="#F05032" d="M124.737 58.378l-55.116-55.114c-3.172-3.174-8.32-3.174-11.494 0l-11.444 11.446 14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679-3.78 3.78-9.901 3.78-13.683 0-2.842-2.844-3.545-7.019-2.105-10.521l-13.048-13.048-.002 34.341c.922.455 1.791 1.063 2.559 1.828 3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683.934-.933 2.014-1.638 3.167-2.11v-34.659c-1.153-.472-2.231-1.172-3.167-2.111-2.862-2.86-3.551-7.06-2.083-10.576l-14.313-14.313-37.792 37.79c-3.175 3.177-3.175 8.325 0 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.495 0l54.858-54.858c3.174-3.176 3.174-8.327-.001-11.501z"/>
+            </svg>
+          )
+        },
+        {
+          name: "Postman",
+          animation: "animate-p5-pulse",
+          logo: (
+            <img 
+              src="https://cdn.simpleicons.org/postman" 
+              alt="Postman logo" 
+              className="w-8 h-8 object-contain"
+            />
+          )
+        }
+      ]
     }
   ];
 
   return (
-    <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8 mr-5 ml-5"
-      style={{
-        backgroundColor: 'color-mix(in srgb, var(--background) 95%, rgba(147, 197, 253, 0.05))',
-        borderBottom: '1px solid #e5e7eb dark:border-gray-700'
-      }}
+    <section 
+      id="skills" 
+      className="py-20 px-6 sm:px-12 bg-black text-white border-b"
+      style={{ borderColor: '#121212' }}
     >
       <div className="container mx-auto max-w-6xl">
         {/* Section Title */}
-        <div className="text-center mb-12 mx-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 inline-block pb-3 relative">
-            My Skills
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-black tracking-widest text-white uppercase inline-block">
+            SKI<span style={{ color: '#ff3131' }}>LLS</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-            Technologies and tools I specialize in for building modern applications
-          </p>
+          <div className="p5-skew-line w-20 mt-2"></div>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mx-4 sm:mx-2 lg:mx-0">
-          {skills.map((skill, index) => (
-            <div
+        {/* Skills Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {skillCategories.map((category, index) => (
+            <div 
               key={index}
-              className="group relative bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer overflow-hidden"
+              className="p5-card p-6 sm:p-8 border"
+              style={{
+                borderColor: 'var(--card-border)',
+                borderRadius: '16px',
+                background: 'linear-gradient(145deg, var(--card-bg-start) 0%, var(--card-bg-end) 100%)',
+                boxShadow: 'var(--card-shadow)',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(255,49,49,0.2)';
+                e.currentTarget.style.borderColor = 'rgba(255,49,49,0.55)';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = 'var(--card-shadow)';
+                e.currentTarget.style.borderColor = 'var(--card-border)';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
             >
-              {/* Background gradient effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-              
-              {/* Skill Logo */}
-              <div className="flex justify-center mb-6 transform group-hover:scale-105 transition-transform duration-300">
-                <div className="w-20 h-20 flex items-center justify-center">
-                  {skill.logo}
-                </div>
+              {/* Category Header */}
+              <div className="flex items-center justify-between mb-6 pb-2 border-b border-zinc-800/80">
+                <h3 className="text-sm font-black tracking-widest text-white uppercase px-3 py-1" style={{ background: 'linear-gradient(90deg, #ff3131, #8b0000)', borderRadius: '8px' }}>
+                  {category.title}
+                </h3>
+                <span className="text-[10px] text-zinc-500 font-mono">0{index + 1} // P5</span>
               </div>
-              
-              {/* Skill Name Only */}
-              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 text-center group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                {skill.name}
-              </h3>
-              
-              {/* Hover effect line */}
-              <div className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${skill.color} group-hover:w-full transition-all duration-300`}></div>
+
+              {/* Sub-grid of Skills (p5-skill-chip wraps for hover micro-animations) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {category.skills.map((skill, sIdx) => (
+                  <div
+                    key={sIdx}
+                    className="p5-skill-chip flex items-center gap-3 p-3 border transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                    style={{
+                      borderColor: 'var(--card-border)',
+                      borderRadius: '10px',
+                      background: 'var(--skill-chip-bg)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = '#ff3131';
+                      e.currentTarget.style.boxShadow = '0 0 14px rgba(255,49,49,0.35)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = 'var(--card-border)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
+                  >
+                    {/* Animated Logo wrapper */}
+                    <div className={`w-8 h-8 flex items-center justify-center flex-shrink-0 ${skill.animation}`}>
+                      {skill.logo}
+                    </div>
+                    <span className="font-bold text-sm tracking-wide text-zinc-300">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>

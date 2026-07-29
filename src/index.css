@@ -1,12 +1,27 @@
 @import "tailwindcss";
-/* index.css - ONLY THEME STYLES */
+
+/* index.css - LAYERED PERSONA 5 / CYBER STYLE */
 :root {
-  /* LIGHT THEME (default) */
-  --background: #ffffff;
-  --text: #213547;
-  --nav-bg: #ffffff;
+  --background: #000000;
+  --text: #ffffff;
+  --nav-bg: rgba(5, 5, 5, 0.95);
+  --card-bg: #151515;
+  --muted-text: #a0a0a0;
+  --primary: #ff3131;
+  --secondary: #8b0000;
+  --accent-glow: rgba(255, 49, 49, 0.5);
+  --border-color: #121212;
+
+  /* Card and Input Theme variables */
+  --card-bg-start: #1a1a1a;
+  --card-bg-end: #111111;
+  --card-border: rgba(255, 255, 255, 0.07);
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  --skill-chip-bg: #0d0d0d;
+  --input-bg: #000000;
+  --input-border: #27272a;
   
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Outfit', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   
@@ -19,14 +34,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* DARK THEME - when <html> has "dark" class */
-:root.dark {
-  --background: #242424;
-  --text: rgba(255, 255, 255, 0.87);
-  --nav-bg: #1a1a1a;
+/* Light Theme fallback */
+:root.light {
+  --background: #f3f4f6;
+  --text: #111827;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --card-bg: #ffffff;
+  --muted-text: #4b5563;
+  --primary: #d92121;
+  --secondary: #991b1b;
+  --accent-glow: rgba(217, 33, 33, 0.15);
+  --border-color: #e4e4e7;
+
+  /* Card and Input Light Theme variables */
+  --card-bg-start: #ffffff;
+  --card-bg-end: #f9fafb;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --skill-chip-bg: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #e4e4e7;
 }
 
-/* Apply to body */
+:root.light body {
+  background-image: 
+    linear-gradient(135deg, rgba(217, 33, 33, 0.01) 25%, transparent 25%, transparent 50%, rgba(217, 33, 33, 0.01) 50%, rgba(217, 33, 33, 0.01) 75%, transparent 75%, transparent),
+    radial-gradient(circle at 85% 15%, rgba(217, 33, 33, 0.06) 0%, transparent 55%),
+    radial-gradient(circle at 15% 85%, rgba(217, 33, 33, 0.03) 0%, transparent 50%);
+}
+
+/* Body styled with multiple visual layers matching Image 2 */
 body {
   background-color: var(--background);
   color: var(--text);
@@ -34,70 +71,246 @@ body {
   min-width: 320px;
   min-height: 100vh;
   transition: background-color 0.3s, color 0.3s;
-}
-/* Add to your existing index.css file */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Add to your existing index.css */
-
-/* Glow effect for the logo */
-.text-glow {
-  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
-               0 0 20px rgba(59, 130, 246, 0.3),
-               0 0 30px rgba(59, 130, 246, 0.1);
+  
+  /* Layered Background: Slanted hatching pattern + Dark red radial glows */
+  background-image: 
+    /* Layer 1: Slanted lines pattern */
+    linear-gradient(135deg, rgba(255, 49, 49, 0.015) 25%, transparent 25%, transparent 50%, rgba(255, 49, 49, 0.015) 50%, rgba(255, 49, 49, 0.015) 75%, transparent 75%, transparent),
+    /* Layer 2: Top-right crimson glow */
+    radial-gradient(circle at 85% 15%, rgba(139, 0, 0, 0.18) 0%, transparent 55%),
+    /* Layer 3: Bottom-left dark red glow */
+    radial-gradient(circle at 15% 85%, rgba(139, 0, 0, 0.08) 0%, transparent 50%);
+  background-size: 16px 16px, 100% 100%, 100% 100%;
+  background-attachment: fixed;
 }
 
-/* Animation for mobile menu */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Add this to your index.css */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
-/* This ensures content appears below navbar when scrolling */
 :target {
   scroll-margin-top: 5rem;
 }
 
-/* Add to index.css */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem; /* Matches navbar height */
+/* Red Moon Profile Background for Hero section */
+.red-moon-bg {
+  position: relative;
 }
 
-/* This helps with anchor links */
-:target {
-  scroll-margin-top: 5rem;
-}
-/* Add to your global CSS */
-:root {
-  --home-bg-light: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  --home-bg-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+.red-moon-bg::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(255,49,49,1) 0%, rgba(139,0,0,0.85) 60%, rgba(0,0,0,0) 75%);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.9;
+  filter: blur(8px);
 }
 
-.dark {
-  --home-bg: var(--home-bg-dark);
+/* Oval frame for profile image */
+.oval-frame {
+  position: relative;
+  z-index: 2;
+  clip-path: ellipse(42% 48% at 50% 50%);
+  border: 3px solid var(--primary);
 }
 
-.light {
-  --home-bg: var(--home-bg-light);
+/* Card layout matching Persona 5 UI - clearly visible boundary outlines */
+.p5-card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 49, 49, 0.28); /* Stronger border visibility */
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.p5-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 25px rgba(255, 49, 49, 0.35); /* Glowing outline on hover */
+  transform: translateY(-4px);
+}
+
+/* Slanted line decorative tag */
+.p5-skew-line {
+  height: 4px;
+  background-color: var(--primary);
+  transform: skewX(-15deg);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+/* Layered triangular background cuts for About and Contact cards */
+.p5-accent-cut-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, transparent 50%, rgba(255, 49, 49, 0.1) 50%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+  border-bottom: 2px solid var(--primary);
+  border-right: 2px solid var(--primary);
+}
+
+.p5-accent-cut-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(-135deg, transparent 50%, rgba(255, 49, 49, 0.1) 50%);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  pointer-events: none;
+  border-bottom: 2px solid var(--primary);
+  border-left: 2px solid var(--primary);
+}
+
+/* Highly attractive neon glow buttons styling */
+.neon-glow-btn {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 15px rgba(255, 49, 49, 0.55), 
+              0 0 30px rgba(255, 49, 49, 0.25);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.neon-glow-btn:hover {
+  background-color: transparent;
+  color: var(--primary);
+  box-shadow: 0 0 25px rgba(255, 49, 49, 0.8), 
+              0 0 50px rgba(255, 49, 49, 0.4);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.neon-glow-btn-outline {
+  background-color: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--primary);
+  box-shadow: 0 0 10px rgba(255, 49, 49, 0.25);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.neon-glow-btn-outline:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(255, 49, 49, 0.75), 
+              0 0 45px rgba(255, 49, 49, 0.35);
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* --- SCROLL SNAP SYSTEM FOR SECTION-BY-SECTION TRANSLATION --- */
+@media (min-width: 768px) {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 0px;
+  }
+  
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100vh;
+  }
+}
+
+/* --- HOVER MICRO-ANIMATIONS FOR SKILL ICONS --- */
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float-icon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes pulse-icon {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 1px rgba(255, 49, 49, 0.3)); }
+  50% { transform: scale(1.08); filter: drop-shadow(0 0 8px rgba(255, 49, 49, 0.6)); }
+}
+
+@keyframes shake-icon {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+/* Active Hover Triggers */
+.p5-skill-chip:hover .animate-p5-spin {
+  animation: rotate-slow 8s linear infinite;
+}
+
+.p5-skill-chip:hover .animate-p5-float {
+  animation: float-icon 1.5s ease-in-out infinite;
+}
+
+.p5-skill-chip:hover .animate-p5-pulse {
+  animation: pulse-icon 1.2s ease-in-out infinite;
+}
+
+.p5-skill-chip:hover .animate-p5-shake {
+  animation: shake-icon 0.4s ease-in-out infinite;
+}
+
+/* --- THEME-AWARE GLOBAL OVERRIDES FOR DYNAMIC LIGHT MODE --- */
+section, footer, nav, header {
+  background-color: var(--background) !important;
+  color: var(--text) !important;
+  border-color: var(--border-color) !important;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+p, span, h1, h2, h3, h4, h5, h6 {
+  transition: color 0.3s;
+}
+
+/* Ensure heading and title text are high-contrast dark in light mode */
+:root.light h1.text-white,
+:root.light h2.text-white,
+:root.light h3.text-white,
+:root.light h4.text-white,
+:root.light p.text-white,
+:root.light .text-zinc-300,
+:root.light .text-gray-300 {
+  color: #111827 !important;
+}
+
+/* Adjust secondary/muted text colors for light mode */
+:root.light .text-gray-400, 
+:root.light .text-gray-500,
+:root.light .text-zinc-500,
+:root.light .text-zinc-400 {
+  color: #4b5563 !important;
+}
+
+/* Navbar light mode background */
+:root.light nav, :root.light header {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: #e4e4e7 !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Input fields dynamic themes */
+input, textarea {
+  background-color: var(--input-bg) !important;
+  color: var(--text) !important;
+  border-color: var(--input-border) !important;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Layout borders */
+:root.light hr {
+  border-color: #e4e4e7 !important;
 }

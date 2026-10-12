@@ -5,7 +5,7 @@ export default function Projects() {
     {
       title: "Ethio-Shopping",
       type: "E-Commerce Web Application",
-      description: "A premium full-stack e-commerce platform for Ethiopian products featuring real-time inventory, product catalog with 29+ verified items, category filtering (Electronics, Fashion, Home & Living, Beauty), video animations, wishlist, and a live search system.",
+      description: "A full-stack e-commerce web application with product browsing, category filtering, wishlist, and a live search system. Built with a clean and responsive UI for a smooth shopping experience.",
       demoLink: "https://ethio-shop-nu.vercel.app/",
       githubLink: "https://github.com/yeob9912",
       image: "/ethio-shop.jpg",

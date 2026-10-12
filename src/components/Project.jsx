@@ -3,6 +3,16 @@ import React from 'react'
 export default function Projects() {
   const projects = [
     {
+      title: "Ethio-Shopping",
+      type: "E-Commerce Web Application",
+      description: "A premium full-stack e-commerce platform for Ethiopian products featuring real-time inventory, product catalog with 29+ verified items, category filtering (Electronics, Fashion, Home & Living, Beauty), video animations, wishlist, and a live search system.",
+      demoLink: "https://ethio-shop-nu.vercel.app/",
+      githubLink: "https://github.com/yeob9912",
+      image: "/ethio-shop.jpg",
+      technologies: ["Next.js", "React", "Node.js", "MongoDB"],
+      accent: "#8b5cf6"
+    },
+    {
       title: "Pharmacy Locator",
       type: "Full Stack Web Application",
       description: "A real-time platform that helps users find medicines and compare pricing across certified pharmacies nearby. Features medicine search, pharmacy listings, and favorites management.",

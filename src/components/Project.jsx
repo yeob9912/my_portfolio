@@ -9,7 +9,7 @@ export default function Projects() {
       demoLink: "https://ethio-shop-nu.vercel.app/",
       githubLink: "https://github.com/yeob9912",
       image: "/ethio-shop.jpg",
-      technologies: ["Next.js", "React", "Node.js", "MongoDB"],
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
       accent: "#8b5cf6"
     },
     {
